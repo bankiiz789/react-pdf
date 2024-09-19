@@ -1,18 +1,54 @@
+/* eslint-disable jsx-a11y/alt-text */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable jsx-a11y/alt-text
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 "use client";
-import dynamic from "next/dynamic";
-// import { useEffect, useState } from "react";
+import {
+  Document,
+  Page,
+  PDFViewer,
+  StyleSheet,
+  Font,
+} from "@react-pdf/renderer";
+import { Header } from "../components/Header";
+import { RadiologyReportBody } from "../components/RadiologyReportBody";
+import { LaboratoryReportBody } from "../components/LaboratoryReportBody";
+import { PatientReferralBody } from "../components/PatientReferralBody";
 
-const InvoicePDF = dynamic(() => import("./myDoc"), {
-  ssr: false,
+Font.register({
+  family: "Prompt",
+  src: "/fonts/Prompt-Regular.ttf",
 });
 
-const View = () => {
-  //   const [client, setClient] = useState(false);
-  //   useEffect(() => {
-  //     setClient(true);
-  //   }, []);
-
-  return <InvoicePDF />;
+const PDF = () => {
+  return (
+    <Document title="My Document">
+      <Page size="A4" style={styles.body}>
+        <Header />
+        {/* <RadiologyReportBody /> */}
+        {/* <LaboratoryReportBody /> */}
+        <PatientReferralBody />
+      </Page>
+    </Document>
+  );
 };
 
-export default View;
+const styles = StyleSheet.create({
+  body: {
+    paddingTop: 35,
+    paddingBottom: 65,
+    paddingHorizontal: 20,
+    fontFamily: "Prompt",
+    fontSize: 16,
+  },
+});
+
+const PDFView = () => {
+  return (
+    <PDFViewer className="w-full h-screen">
+      <PDF />
+    </PDFViewer>
+  );
+};
+
+export default PDFView;
