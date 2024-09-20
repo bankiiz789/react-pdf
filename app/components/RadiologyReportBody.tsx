@@ -4,218 +4,126 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 "use client";
 import { Text, View } from "@react-pdf/renderer";
+import { createTw } from "react-pdf-tailwind";
+
+const tw = createTw({});
 
 export const RadiologyReportBody = () => {
   return (
-    <View style={{ display: "flex", gap: "20px" }}>
-      <View>
-        <Text style={{ textAlign: "center", paddingTop: "16px" }}>
-          ใบรายงานผลเอ็กซเรย์
-        </Text>
-        <Text style={{ textAlign: "center", fontSize: "12px" }}>
-          Radiology Report
-        </Text>
+    <View style={tw("flex gap-[20px]")}>
+      <View style={tw("text-center")}>
+        <Text style={tw("pt-[16px]")}>ใบรายงานผลเอ็กซเรย์</Text>
+        <Text style={tw("text-[12px]")}>Radiology Report</Text>
       </View>
 
-      <View style={{ display: "flex", flexDirection: "column", gap: "60px" }}>
-        <View
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "flex-end",
-            gap: "10px",
-            paddingRight: "16px",
-          }}
-        >
-          <Text
-            style={{
-              fontSize: "10px",
-            }}
-          >
-            Refer To :
-          </Text>
-          <Text
-            style={{
-              fontSize: "10px",
-              borderBottom: "1px dashed #717591",
-              // width: "100px",
-            }}
-          >
+      <View style={tw("flex flex-col gap-[60px] text-[10px]")}>
+        <View style={tw("flex flex-row justify-end gap-[10px]")}>
+          <Text>Refer To :</Text>
+          <Text style={tw("border-b border-dashed border-[#717591]")}>
             Hello from the another side
           </Text>
         </View>
 
-        <View style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-          <View
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              width: "100%",
-              justifyContent: "space-between",
-            }}
-          >
-            <Text style={{ fontSize: "10px" }}>Red No.</Text>
+        <View style={tw("flex flex-col justify-end gap-[10px]")}>
+          <View style={tw("flex flex-row justify-between w-[100%]")}>
+            <Text>Red No.</Text>
             <Text
-              style={{
-                textAlign: "center",
-                fontSize: "10px",
-                borderBottom: "1px dashed #717591",
-                width: "120px",
-              }}
+              style={tw(
+                "text-center border-b border-dashed border-[#717591] w-[120px]"
+              )}
             >
               1000758
             </Text>
-            <Text style={{ fontSize: "10px" }}>Pet Name</Text>
+            <Text>Pet Name</Text>
             <Text
-              style={{
-                textAlign: "center",
-                fontSize: "10px",
-                borderBottom: "1px dashed #717591",
-                width: "120px",
-              }}
+              style={tw(
+                "text-center border-b border-dashed border-[#717591] w-[120px]"
+              )}
             >
               Bobby
             </Text>
-            <Text style={{ fontSize: "10px" }}>Species</Text>
+            <Text>Species</Text>
             <Text
-              style={{
-                textAlign: "center",
-                fontSize: "10px",
-                borderBottom: "1px dashed #717591",
-                width: "120px",
-              }}
+              style={tw(
+                "text-center border-b border-dashed border-[#717591] w-[120px]"
+              )}
             >
               Dog
             </Text>
           </View>
-          <View
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              width: "100%",
-              justifyContent: "space-between",
-            }}
-          >
-            <Text style={{ fontSize: "10px" }}>Breed</Text>
+          <View style={tw("flex flex-row justify-between w-[100%]")}>
+            <Text>Breed</Text>
             <Text
-              style={{
-                textAlign: "center",
-                fontSize: "10px",
-                borderBottom: "1px dashed #717591",
-                width: "120px",
-              }}
+              style={tw(
+                "text-center border-b border-dashed border-[#717591] w-[120px]"
+              )}
             >
               Golden Retriever
             </Text>
-            <Text style={{ fontSize: "10px" }}>Gender</Text>
+            <Text>Gender</Text>
             <Text
-              style={{
-                textAlign: "center",
-                fontSize: "10px",
-                borderBottom: "1px dashed #717591",
-                width: "120px",
-              }}
+              style={tw(
+                "text-center border-b border-dashed border-[#717591] w-[120px]"
+              )}
             >
               Male
             </Text>
-            <Text style={{ fontSize: "10px" }}>Birth Date</Text>
+            <Text>Birth Date</Text>
             <Text
-              style={{
-                textAlign: "center",
-                fontSize: "10px",
-                borderBottom: "1px dashed #717591",
-                width: "120px",
-              }}
+              style={tw(
+                "text-center border-b border-dashed border-[#717591] w-[120px]"
+              )}
             >
               28/11/1998 (1 year)
             </Text>
           </View>
-          <View
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              width: "100%",
-              // justifyContent: "",
-            }}
-          >
-            <Text style={{ fontSize: "10px" }}>Owner Name</Text>
+          <View style={tw("flex flex-row w-[100%]")}>
+            <Text>Owner Name</Text>
             <Text
-              style={{
-                textAlign: "center",
-                fontSize: "10px",
-                borderBottom: "1px dashed #717591",
-                width: "120px",
-              }}
+              style={tw(
+                "text-center border-b border-dashed border-[#717591] w-[120px]"
+              )}
             >
               Mr. Green Smith
             </Text>
-            <Text style={{ fontSize: "10px" }}>Phone Number</Text>
+            <Text>Phone Number</Text>
             <Text
-              style={{
-                textAlign: "center",
-                fontSize: "10px",
-                borderBottom: "1px dashed #717591",
-                width: "120px",
-              }}
+              style={tw(
+                "text-center border-b border-dashed border-[#717591] w-[120px]"
+              )}
             >
               0967876765
             </Text>
           </View>
-          <View
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              width: "100%",
-            }}
-          >
-            <View style={{ display: "flex", flexDirection: "row" }}>
-              <Text style={{ fontSize: "10px" }}>Address</Text>
+          <View style={tw("flex flex-row w-[100%]")}>
+            <View style={tw("flex flex-row")}>
+              <Text>Address</Text>
               <Text
-                style={{
-                  textAlign: "center",
-                  fontSize: "10px",
-                  borderBottom: "1px dashed #717591",
-                  width: "360px",
-                }}
+                style={tw(
+                  "text-center border-b border-dashed border-[#717591] w-[360px]"
+                )}
               >
                 750 Pattaya Bangkok
               </Text>
             </View>
-            <View
-              style={{
-                display: "flex",
-                flexDirection: "row",
-              }}
-            >
-              <Text style={{ fontSize: "10px" }}>Report Date</Text>
+            <View style={tw("flex flex-row")}>
+              <Text>Report Date</Text>
               <Text
-                style={{
-                  textAlign: "center",
-                  fontSize: "10px",
-                  borderBottom: "1px dashed #717591",
-                  width: "100px",
-                }}
+                style={tw(
+                  "text-center border-b border-dashed border-[#717591] w-[100px]"
+                )}
               >
                 09/09/2024
               </Text>
             </View>
           </View>
-          <View
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              width: "100%",
-            }}
-          >
-            <View style={{ display: "flex", flexDirection: "row" }}>
-              <Text style={{ fontSize: "10px" }}>Clinician</Text>
+          <View style={tw("flex flex-row w-[100%]")}>
+            <View style={tw("flex flex-row")}>
+              <Text>Clinician</Text>
               <Text
-                style={{
-                  textAlign: "center",
-                  fontSize: "10px",
-                  borderBottom: "1px dashed #717591",
-                  width: "100px",
-                }}
+                style={tw(
+                  "text-center border-b border-dashed border-[#717591] w-[100px]"
+                )}
               >
                 Dr. John Doe
               </Text>
@@ -225,52 +133,22 @@ export const RadiologyReportBody = () => {
       </View>
 
       {/* Table Zone */}
-      <View
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          width: "100%",
-          justifyContent: "center",
-        }}
-      >
+      <View style={tw("flex flex-row justify-center w-[100%] text-[10px]")}>
         {/* Left Table  */}
         <View
-          style={{
-            border: "1px solid #717591",
-            borderRight: "none",
-            height: "250px",
-            width: "100px",
-            flexGrow: 1,
-          }}
+          style={tw(
+            "border border-[#717591] border-r-0 h-[250px] w-[100px] flex grow"
+          )}
         >
-          <Text
-            style={{
-              fontSize: "10px",
-              borderBottom: "1px solid #717591",
-              textAlign: "center",
-              paddingVertical: "10px",
-            }}
-          >
+          <Text style={tw("text-center border-b border-[#717591] py-[10px]")}>
             History
           </Text>
         </View>
         {/* Right Table */}
         <View
-          style={{
-            border: "1px solid #717591",
-            height: "250px",
-            width: "100px",
-            flexGrow: 1,
-          }}
+          style={tw("border border-[#717591] h-[250px] w-[100px] flex grow")}
         >
-          <Text
-            style={{
-              fontSize: "10px",
-              borderBottom: "1px solid #717591",
-              textAlign: "center",
-              paddingVertical: "10px",
-            }}
-          >
+          <Text style={tw("text-center border-b border-[#717591] py-[10px]")}>
             Clinician Diagnosis
           </Text>
         </View>

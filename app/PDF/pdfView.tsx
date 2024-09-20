@@ -26,8 +26,8 @@ const PDF = () => {
       <Page size="A4" style={styles.body}>
         <Header />
         {/* <RadiologyReportBody /> */}
-        {/* <LaboratoryReportBody /> */}
-        <PatientReferralBody />
+        <LaboratoryReportBody />
+        {/* <PatientReferralBody /> */}
       </Page>
     </Document>
   );
