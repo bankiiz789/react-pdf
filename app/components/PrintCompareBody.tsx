@@ -34,7 +34,7 @@ export const PrintCompareBody = () => {
           <View style={tw("flex flex-row gap-2")}>
             <Text style={tw("w-[70px]")}>Pet Name</Text>
             <Text>:</Text>
-            <Text style={tw("font-promptBold")}>Happy</Text>
+            <Text style={tw("font-promptSemiBold")}>Happy</Text>
           </View>
         </View>
 

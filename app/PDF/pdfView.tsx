@@ -28,7 +28,7 @@ const registerFonts = () => {
     src: "/fonts/Prompt-Medium.ttf",
   });
   Font.register({
-    family: "PromptBold",
+    family: "PromptSemiBold",
     src: "/fonts/Prompt-SemiBold.ttf",
   });
 };
@@ -38,7 +38,7 @@ export const tw = createTw({
     fontFamily: {
       promptReg: ["PromptRegular", "serif"],
       promptMed: ["PromptMedium", "serif"],
-      promptBold: ["PromptBold", "serif"],
+      promptSemiBold: ["PromptSemiBold", "serif"],
     },
   },
 });
