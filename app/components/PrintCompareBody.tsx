@@ -102,41 +102,43 @@ export const PrintCompareBody = () => {
         {/* Header Table  */}
         <View
           style={tw(
-            "border-b border-[#D9D9D9] w-full flex flex-row justify-around py-[10px] pl-[10px] text-[#2E3038]"
+            "border-b border-[#D9D9D9] w-full flex flex-row justify-around py-[10px] pl-[10px] text-[#2E3038] font-promptMed"
           )}
         >
           <Text style={tw("w-[12%]")}>Parameter</Text>
-          <View style={tw("flex flex-col w-[16%] text-center")}>
+          <View style={tw("flex flex-col w-[19%] text-center")}>
             <Text>Lasted visit Date</Text>
-            <Text style={tw("text-[#4E5161]")}>20/08/2024</Text>
+            <Text style={tw("text-[#4E5161] font-promptReg")}>20/08/2024</Text>
           </View>
           <View style={tw("flex flex-col w-[13%] text-center")}>
             <Text>Visit1</Text>
-            <Text style={tw("text-[#4E5161]")}>20/08/2024</Text>
+            <Text style={tw("text-[#4E5161] font-promptReg")}>20/08/2024</Text>
           </View>
           <View style={tw("flex flex-col w-[17%] text-center")}>
             <Text>Visit1</Text>
-            <Text style={tw("text-[#4E5161]")}>20/08/2024</Text>
+            <Text style={tw("text-[#4E5161] font-promptReg")}>20/08/2024</Text>
           </View>
-          <Text style={tw("w-[12%]")}>Low</Text>
-          <Text style={tw("w-[12%]")}>High</Text>
-          <Text style={tw("w-[12%]")}>Status</Text>
+          <Text style={tw("w-[8%]")}>Low</Text>
+          <Text style={tw("w-[8%]")}>High</Text>
+          <Text style={tw("w-[8%]")}>Status</Text>
         </View>
 
         {/* Body Table  */}
         <View
-          style={tw("w-full flex flex-row justify-around py-[10px] pl-[10px]")}
+          style={tw(
+            "w-full flex flex-row justify-around py-[10px] pl-[10px] font-promptReg"
+          )}
         >
           <Text style={tw("w-[12%]")}>HGB</Text>
-          <View style={tw("flex flex-row gap-2 w-[16%]")}>
+          <View style={tw("flex flex-row gap-2 w-[19%]")}>
             <Text>5.65</Text>
             <Text>g/dL</Text>
           </View>
           <Text style={tw("w-[13%] text-center")}>5.65</Text>
-          <Text style={tw("w-[17%] text-center")}>8.87</Text>
-          <Text style={tw("w-[12%]")}>4.87</Text>
-          <Text style={tw("w-[12%]")}>8.87</Text>
-          <Text style={tw("w-[12%]")}>Normal</Text>
+          <Text style={tw("w-[17%] text-center text-[#D85050]")}>8.87</Text>
+          <Text style={tw("w-[8%]")}>4.87</Text>
+          <Text style={tw("w-[8%]")}>8.87</Text>
+          <Text style={tw("w-[8%] font-promptMed")}>Normal</Text>
         </View>
       </View>
     </View>
