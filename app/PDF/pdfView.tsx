@@ -14,20 +14,48 @@ import { Header } from "../components/Header";
 import { RadiologyReportBody } from "../components/RadiologyReportBody";
 import { LaboratoryReportBody } from "../components/LaboratoryReportBody";
 import { PatientReferralBody } from "../components/PatientReferralBody";
+import { PrintCompareBody } from "../components/PrintCompareBody";
+import { useEffect } from "react";
+import { createTw } from "react-pdf-tailwind";
 
-Font.register({
-  family: "Prompt",
-  src: "/fonts/Prompt-Regular.ttf",
+const registerFonts = () => {
+  Font.register({
+    family: "PromptRegular",
+    src: "/fonts/Prompt-Regular.ttf",
+  });
+  Font.register({
+    family: "PromptMedium",
+    src: "/fonts/Prompt-Medium.ttf",
+  });
+  Font.register({
+    family: "PromptBold",
+    src: "/fonts/Prompt-SemiBold.ttf",
+  });
+};
+
+export const tw = createTw({
+  theme: {
+    fontFamily: {
+      promptReg: ["PromptRegular", "serif"],
+      promptMed: ["PromptMedium", "serif"],
+      promptBold: ["PromptBold", "serif"],
+    },
+  },
 });
 
 const PDF = () => {
+  useEffect(() => {
+    registerFonts();
+  }, []);
+
   return (
     <Document title="My Document">
       <Page size="A4" style={styles.body}>
         <Header />
         {/* <RadiologyReportBody /> */}
-        <LaboratoryReportBody />
+        {/* <LaboratoryReportBody /> */}
         {/* <PatientReferralBody /> */}
+        <PrintCompareBody />
       </Page>
     </Document>
   );
@@ -38,8 +66,6 @@ const styles = StyleSheet.create({
     paddingTop: 35,
     paddingBottom: 65,
     paddingHorizontal: 20,
-    fontFamily: "Prompt",
-    fontSize: 16,
   },
 });
 

@@ -4,41 +4,28 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 
 "use client";
-import { Text, StyleSheet, Image } from "@react-pdf/renderer";
+import { View, Text, Image } from "@react-pdf/renderer";
+import { tw } from "../PDF/PDFView";
 
 export const Header = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-around",
-        flexDirection: "row",
-        gap: "10px",
-        borderBottom: "1px solid #2B91CC",
-        paddingBottom: "16px",
-      }}
+    <View
+      style={tw(
+        "flex flex-row justify-around gap-[10px] border-b border-[#2B91CC] pb-[16px]"
+      )}
     >
-      <Image style={styles.image} src="/logo.png" />
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          fontSize: "10px",
-        }}
-      >
-        <Text>โรงพยาบาลสัคว์แฮปปี้เเพ็ท</Text>
-        <Text>
+      <Image style={tw("w-[120px] h-[40px]")} src="/logo.png" />
+      <View style={tw("flex flex-col text-[10] font-promptReg")}>
+        <Text style={tw("text-[10] font-promptReg")}>
+          โรงพยาบาลสัคว์แฮปปี้เเพ็ท
+        </Text>
+        <Text style={tw("text-[10] font-promptReg")}>
           750 ชั้น 1 ถ.สุขุมวิท 30/1 แขวงคลองตัน เขตคลองเตย กรุงเทพมหานคร 10110
         </Text>
-        <Text>โทรศัพท์ : 098-886-0687</Text>
-      </div>
-    </div>
+        <Text style={tw("text-[10] font-promptReg")}>
+          โทรศัพท์ : 098-886-0687
+        </Text>
+      </View>
+    </View>
   );
 };
-
-const styles = StyleSheet.create({
-  image: {
-    width: "120px",
-    height: "40px",
-  },
-});

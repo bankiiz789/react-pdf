@@ -126,7 +126,7 @@ export const LaboratoryReportBody = () => {
       {/* Table Zone */}
       <View
         style={tw(
-          "flex flex-col w-[100%] text-[10px] border border-[#D9D9D9] rounded-[5px] text-[10px] text-center"
+          "flex flex-col w-[100%] border border-[#D9D9D9] rounded-[5px] text-[10px] text-center"
         )}
       >
         {/* Header Table  */}
